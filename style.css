@@ -1,0 +1,157 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+}
+
+/* Dark Mode */
+body.dark .container {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+/* Dark Mode Toggle */
+#darkModeToggle {
+    background: #ffcc00;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#darkModeToggle:hover {
+    background: #e6b800;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    gap: 10px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+body.dark .input-group {
+    background: #333;
+}
+
+#taskInput, #deadline {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+#deadline {
+    text-align: center;
+}
+
+/* Add Task Button */
+#addTaskBtn {
+    padding: 12px 18px;
+    font-size: 24px;
+    background: #ff8c00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#addTaskBtn:hover {
+    background: #e07b00;
+}
+
+/* Task List */
+#taskList {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Task Item */
+.task {
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: grab;
+    transition: all 0.2s ease;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+.task span {
+    font-size: 14px;
+    color: #555;
+}
+
+.task.overdue { background: #ffcccc; }
+.task.warning { background: #fff5cc; }
+.task.ok { background: #ccffcc; }
+
+/* Completed Task */
+.task.done {
+    text-decoration: line-through;
+    background: #d4edda;
+    color: #155724;
+}
+
+/* Delete Button */
+.task .close {
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.task .close:hover {
+    color: darkred;
+}
+
+/* Dark Mode Adjustments */
+body.dark .task {
+    background: #333;
+    color: white;
+}
+
+body.dark .task.done {
+    background: #222;
+}
